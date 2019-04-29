@@ -1,0 +1,9 @@
+<h1>Welcome to the gossips page</h1>
+<h2>See below the list of gossips : </h2>
+<p>(click on it to have more details)</p>
+<ul>
+<% @my_gossips.each_with_index do |gossip, i| %>
+<li>N°<%=i%> by <%= gossip.user.first_name %> <br>
+Title : <%= gossip.title %>...<%= link_to "see more", gossip_by_id_path(i)%></li>
+<% end %>
+</ul>
