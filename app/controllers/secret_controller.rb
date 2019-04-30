@@ -1,5 +1,5 @@
 class SecretController < ApplicationController
-  def secret
+  def index
     @secret = params[:secret]
   end
 
